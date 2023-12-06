@@ -3,171 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="css/style.css">  
+    
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            overflow-x: auto;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-        
-        .task-container {
-            display: flex;
-            flex-wrap: nowrap; 
-            overflow-x: auto; 
-            padding: 20px;
-        }
-
-        /* style for the task column starts */
-
-        .task-column {
-            overflow-y: auto; 
-            max-height: 90vh;
-            flex: 0 0 auto; 
-            width: 350px;
-            margin-right: 20px;
-            background-color: #f2f4f7;
-            border: 1px solid #f2f4f7;
-            border-radius: 5px;
-            padding: 10px;
-        }
-
-          .task-column::-webkit-scrollbar {
-            width: 8px; 
-        }
-
-        .task-column::-webkit-scrollbar-thumb {
-            background-color: #0071be;
-            border-radius: 5px;
-        }
-
-        .task-column::-webkit-scrollbar-track {
-            background-color: #f1f1f1; 
-        }
-
-        /* For Firefox */
-        .task-column {
-            scrollbar-width: thin;
-            scrollbar-color: #0071be #f1f1f1;
-        }
-
-        
-        /* style for the task column ends */
-
-        .half-rectangle {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-            border-top-left-radius: 20px; 
-            border-bottom-left-radius: 20px; 
-        }
-
-        .hf-bg-incomplete {
-            background-color: #d21010;
-        }
-
-        
-        .hf-bg-todo {
-            background-color: #00b5ff;
-        }
-
-        .hf-bg-doing {
-            background-color: #ffe700;
-        }
-
-        .task-heading {
-            display: flex;
-            align-items: center;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color:#605766
-        }
-
-        /* contains style for task card */
-
-        .task-card {
-            margin-bottom: 10px;
-            background-color: #ffffff;
-            border-radius: 5px;
-            padding: 10px;
-            min-height: 150px;
-        }
-
-        .task-card-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .profile-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .profile-image {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 5px;
-        }
-
-        .profile-image-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 5px;
-            color:#666666;
-            font-size: 16px;
-            font-weight: 400;
-            background-color: rgb(233, 235, 238);
-        }
-
-        .role {
-            color:#444444;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .client-info {
-            text-align: right;
-        }
-
-        .task-description {
-            font-size: 16px;
-            color:#666666;
-        }
-
-        .task-progress {
-            background-color: #f2f4f7;
-            padding: 3px 6px;
-            border-radius: 5px;
-            color:#666666;
-        }
-
-        .task-coworker {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color:#666666;
-        }
-
-        .task-info-icon-group {
-            color:#666666;
-            font-size: 16px;
-            font-weight: 400;
-        }
-
-        
-    </style>
 </head>
 <body>
 
-<div class="container-fluid">
+<div class="wrapper">
     <div class="task-container">
         <!-- Incomplete Column -->
         <div class="task-column">
@@ -206,7 +51,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -248,7 +93,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -290,7 +135,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -332,7 +177,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -374,7 +219,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -424,7 +269,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -466,7 +311,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -508,7 +353,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -550,7 +395,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -592,7 +437,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -642,7 +487,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -684,7 +529,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -726,7 +571,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -768,7 +613,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -810,7 +655,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -857,7 +702,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -899,7 +744,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -941,7 +786,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -983,7 +828,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -1025,7 +870,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -1072,7 +917,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div id="#attachmentButton" class="task-info-icon-group">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -1114,7 +959,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -1156,7 +1001,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -1198,7 +1043,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -1240,7 +1085,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -1287,7 +1132,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -1329,7 +1174,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -1371,7 +1216,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -1413,7 +1258,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -1455,7 +1300,7 @@
                         <i class="fa-regular fa-comments"></i>
                         <span>15</span>
                     </div>
-                    <div class="task-info-icon-group">
+                    <div class="task-info-icon-group attachmentButton">
                         <i class="fa-solid fa-paperclip"></i>
                         <span>25</span>
                     </div>
@@ -1468,12 +1313,21 @@
             <!-- Add more task cards as needed -->
         </div>
     </div>
+    <!-- modal for file upload -->
+    <div id="#attachmentModal" style="display: none;">
+        <div class="modalUpload">
+            <div class="closeModal" onclick="closeModal()">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="fileInput" name="files[]" multiple accept="image/*,video/*"/>
+                <button class="fileUploadBtn" type="button" id="uploadButton">Upload Files</button>
+            </form>
+            <ul id="fileList" class="attachmentList"></ul>
+        </div>
+    </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<script src="js/scripts.js"></script>
 </body>
 </html>
 

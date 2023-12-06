@@ -1,0 +1,221 @@
+body {
+    overflow-x: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.task-container {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    padding: 20px;
+}
+
+
+.task-container::-webkit-scrollbar {
+    height: 8px; 
+}
+
+.task-container::-webkit-scrollbar-thumb {
+    height: 8px;
+    background-color: #0071be;
+    border-radius: 5px;
+}
+
+.task-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+}
+
+/* For Firefox */
+.task-cotainer {
+    border-radius: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #0071be #f1f1f1;
+}
+
+
+/* style for the task column starts */
+
+.task-column {
+    overflow-y: auto; 
+    max-height: 95vh;
+    flex: 0 0 auto; 
+    width: 360px;
+    margin-right: 20px;
+    background-color: #f2f4f7;
+    border: 1px solid #f2f4f7;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.task-column::-webkit-scrollbar {
+    width: 8px; 
+}
+
+.task-column::-webkit-scrollbar-thumb {
+    background-color: #0071be;
+    border-radius: 5px;
+}
+
+.task-column::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+}
+
+/* For Firefox */
+.task-column {
+    scrollbar-width: thin;
+    scrollbar-color: #0071be #f1f1f1;
+}
+
+
+/* style for the task column ends */
+
+.half-rectangle {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-top-left-radius: 20px; 
+    border-bottom-left-radius: 20px; 
+}
+
+.hf-bg-incomplete {
+    background-color: #d21010;
+}
+
+
+.hf-bg-todo {
+    background-color: #00b5ff;
+}
+
+.hf-bg-doing {
+    background-color: #ffe700;
+}
+
+.task-heading {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:#605766
+}
+
+/* contains style for task card */
+
+.task-card {
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 150px;
+}
+
+.task-card-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.profile-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    color:#666666;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgb(233, 235, 238);
+}
+
+.role {
+    color:#444444;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.client-info {
+    text-align: right;
+}
+
+.task-description {
+    font-size: 16px;
+    color:#666666;
+}
+
+.task-progress {
+    background-color: #f2f4f7;
+    padding: 3px 6px;
+    border-radius: 5px;
+    color:#666666;
+}
+
+.task-coworker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:#666666;
+}
+
+.task-info-icon-group {
+    color:#666666;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.modalUpload {
+    background-color: #ffffff;
+    width: 400px;
+    height: 300px; 
+    padding: 30px; 
+    margin:auto; 
+    position:fixed; 
+    top:0; 
+    right:0; 
+    bottom:0; 
+    left:0;
+}
+
+
+
+.attachmentList {
+    list-style-type: none;
+}
+
+.fileUploadBtn {
+    margin-top: 10px;
+    padding: 5px;
+    border: none;
+    outline: 0;
+    border-radius: 5px;
+    background-color: rgb(38, 128, 38);
+    color: white;
+}
+
+.closeModal {
+    text-align: right;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.attachmentButton {
+    cursor: pointer;
+}
