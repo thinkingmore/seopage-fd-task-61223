@@ -19,7 +19,11 @@
             padding: 20px;
         }
 
+        /* style for the task column starts */
+
         .task-column {
+            overflow-y: auto; 
+            max-height: 90vh;
             flex: 0 0 auto; 
             width: 350px;
             margin-right: 20px;
@@ -28,6 +32,28 @@
             border-radius: 5px;
             padding: 10px;
         }
+
+          .task-column::-webkit-scrollbar {
+            width: 8px; 
+        }
+
+        .task-column::-webkit-scrollbar-thumb {
+            background-color: #0071be;
+            border-radius: 5px;
+        }
+
+        .task-column::-webkit-scrollbar-track {
+            background-color: #f1f1f1; 
+        }
+
+        /* For Firefox */
+        .task-column {
+            scrollbar-width: thin;
+            scrollbar-color: #0071be #f1f1f1;
+        }
+
+        
+        /* style for the task column ends */
 
         .half-rectangle {
             width: 20px;
@@ -141,7 +167,7 @@
 </head>
 <body>
 
-<div class="container-fluid mt-5">
+<div class="container-fluid">
     <div class="task-container">
         <!-- Incomplete Column -->
         <div class="task-column">
