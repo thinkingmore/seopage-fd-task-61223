@@ -9,19 +9,16 @@ function closeModal() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Find all elements with the specific class
-    let uploadButtons = document.querySelectorAll('.attachmentButton');
+    const uploadButtons = document.querySelectorAll('.attachmentButton');
 
-    // Attach a specific function to each element
     uploadButtons.forEach(function (button) {
         button.addEventListener('click', function () {
             openModal();
         });
     });
 
-
-    const uploadButton = document.getElementById("uploadButton");
-    uploadButton.addEventListener("click", uploadFiles);
+    const submitButton = document.getElementById("submitButton");
+    submitButton.addEventListener("click", uploadFiles);
 
     function updateFileList(selectedFiles) {
         const fileList = document.getElementById("fileList");
@@ -32,29 +29,59 @@ document.addEventListener('DOMContentLoaded', function () {
             fileList.appendChild(listItem);
         }
     }
+
     function uploadFiles(event) {
         event.preventDefault();
 
         const fileInput = document.getElementById("fileInput");
         const selectedFiles = fileInput.files;
 
-        // Check if any files are selected
         if (selectedFiles.length === 0) {
             alert("Please select at least one file to upload.");
             return;
         }
 
-        // Display selected files in a list
         updateFileList(selectedFiles);
 
         const formData = new FormData();
+        formData.append('_token', '{{ csrf_token() }}');
 
-        // Append each selected file to the FormData object
+
         for (let i = 0; i < selectedFiles.length; i++) {
             formData.append("files[]", selectedFiles[i]);
         }
 
-        // The rest of your code for uploading the files...
-        // (e.g., using Fetch API as mentioned in the previous response)
+        const xhr = new XMLHttpRequest();
+        const url = 'http://127.0.0.1:8000/upload'; // Update with your API endpoint
+        
+
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                alert(response.message);
+                // Call a function to get total attachments
+                getTotalAttachments();
+            } else {
+                handleUploadError(xhr.status);
+            }
+        };
+
+        xhr.onerror = function () {
+            handleUploadError(xhr.status);
+        };
+
+        xhr.send(formData);
+    }
+
+    function handleUploadError(status) {
+        let errorMessage = 'Error uploading files.';
+
+        if (status === 413) {
+            errorMessage = 'File size exceeds the maximum limit.';
+        }
+
+        alert(errorMessage);
     }
 });

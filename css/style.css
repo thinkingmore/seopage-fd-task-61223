@@ -219,3 +219,16 @@ body {
 .attachmentButton {
     cursor: pointer;
 }
+
+.block-btn {
+    padding: 8px 10px;
+    margin-top: 20px;
+    width: 100%;
+    display: block;
+    background-color: #0071be;
+    color: #ffffff;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+}
